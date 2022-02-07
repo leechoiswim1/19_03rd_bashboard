@@ -1,11 +1,13 @@
 import React, { ReactElement } from 'react';
-import * as S from './Sample.styled';
+import { SCProps } from 'types/props';
 import SampleProps from './Sample.type';
+import * as S from './Sample.styled';
 
-const Sample: React.FC<SampleProps> = ({ sampleId, title }: SampleProps): ReactElement => (
-  <S.Sample>
+const Sample = ({ className, children, sampleId, title }: SCProps<SampleProps>): ReactElement => (
+  <S.Sample className={className}>
     <span>{sampleId}</span>
     <span>{title}</span>
+    {children}
   </S.Sample>
 );
 
