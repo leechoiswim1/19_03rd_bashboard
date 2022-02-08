@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Sample, Nav } from 'components';
+import { Nav } from 'components/organisms';
 import { getRequest } from './api/request';
 
 const App = () => {
@@ -9,9 +9,6 @@ const App = () => {
   return (
     <div className="App">
       <Nav />
-      <Sample sampleId={1} title="Sample">
-        123
-      </Sample>
     </div>
   );
 };
