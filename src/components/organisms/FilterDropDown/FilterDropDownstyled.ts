@@ -25,7 +25,7 @@ export const Button = styled.button<FilterDropProps>`
   background: none;
   height: 32px;
   display: flex;
-  border: 2px solid ${props => props.theme.color.gray};
+  border: 1px solid ${props => props.theme.color.gray};
   border-radius: 4px;
   justify-content: center;
   align-items: center;
