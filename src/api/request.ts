@@ -6,7 +6,7 @@ const instance = axios.create({
 });
 
 export const getRequest = async () => {
-  const response = await instance.get<unknown, AxiosResponse<Request>, unknown>('/requests');
+  const response = await instance.get<unknown, AxiosResponse<Request[]>, unknown>('/requests');
 
   return response.data;
 };
