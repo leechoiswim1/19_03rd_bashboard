@@ -19,6 +19,12 @@ export const theme: DefaultTheme = {
     xl: '24px',
   },
 
+  fontWeight: {
+    strong: 800,
+    semiStrong: 500,
+    normal: 400,
+  },
+
   lineHeight: {
     s: 1.42,
     m: 1.5,

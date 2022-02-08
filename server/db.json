@@ -7,13 +7,8 @@
       "due": "2020.12.14",
       "count": 2,
       "amount": 100,
-      "method": [
-        "밀링",
-        "선반"
-      ],
-      "material": [
-        "알루미늄"
-      ],
+      "method": ["밀링", "선반"],
+      "material": ["알루미늄"],
       "status": "대기중"
     },
     {
@@ -23,13 +18,8 @@
       "due": "2020.12.13",
       "count": 2,
       "amount": 100,
-      "method": [
-        "선반"
-      ],
-      "material": [
-        "탄소강",
-        "강철"
-      ],
+      "method": ["선반"],
+      "material": ["탄소강", "강철"],
       "status": "상담중"
     },
     {
@@ -39,12 +29,8 @@
       "due": "2020.12.12",
       "count": 1,
       "amount": 20,
-      "method": [
-        "선반"
-      ],
-      "material": [
-        "구리"
-      ],
+      "method": ["선반"],
+      "material": ["구리"],
       "status": "대기중"
     },
     {
@@ -54,12 +40,8 @@
       "due": "2020.12.11",
       "count": 1,
       "amount": 45,
-      "method": [
-        "선반"
-      ],
-      "material": [
-        "스테인리스강"
-      ],
+      "method": ["선반"],
+      "material": ["스테인리스강"],
       "status": "대기중"
     },
     {
@@ -69,13 +51,8 @@
       "due": "2020.12.10",
       "count": 2,
       "amount": 2,
-      "method": [
-        "밀링"
-      ],
-      "material": [
-        "알루미늄",
-        "탄소강"
-      ],
+      "method": ["밀링"],
+      "material": ["알루미늄", "탄소강"],
       "status": "대기중"
     },
     {
@@ -85,12 +62,8 @@
       "due": "2020.12.09",
       "count": 1,
       "amount": 20,
-      "method": [
-        "밀링"
-      ],
-      "material": [
-        "강철"
-      ],
+      "method": ["밀링"],
+      "material": ["강철"],
       "status": "대기중"
     }
   ]
