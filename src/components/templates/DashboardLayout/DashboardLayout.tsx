@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 import { ToggleBtn } from 'components/atoms';
-import { Title } from 'components/molecules';
+import { Title, Card } from 'components/molecules';
 import { Filter } from 'components/organisms';
 import * as S from './DashboardLayout.styled';
 
@@ -19,7 +19,7 @@ const DashboardLayout = (): ReactElement => {
       <S.RequestCardWrapper>
         {cardsList.map((_, index) => (
           // eslint-disable-next-line react/no-array-index-key
-          <S.DummyCard key={index} />
+          <Card key={index} />
         ))}
       </S.RequestCardWrapper>
     </S.Layout>
