@@ -9,7 +9,6 @@ const HeadBtn = ({ title }: HeadBtnProps): ReactElement => (
     <S.Text>{title}</S.Text>
   </S.Wrapper>
 );
-
 HeadBtn.defaultProps = {
   title: 'title',
 };
