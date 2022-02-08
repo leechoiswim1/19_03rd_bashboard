@@ -22,8 +22,7 @@ const LabeledCheckBox = ({
   );
 
   return (
-    <>
-      <S.Label htmlFor={id}>{label}</S.Label>
+    <S.WrapperLabel>
       <CheckBox
         id={id}
         checked={isChecked}
@@ -31,7 +30,8 @@ const LabeledCheckBox = ({
         required={required}
         readOnly={readOnly}
       />
-    </>
+      <S.Label htmlFor={id}>{label}</S.Label>
+    </S.WrapperLabel>
   );
 };
 export default LabeledCheckBox;
