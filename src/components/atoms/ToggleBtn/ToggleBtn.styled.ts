@@ -3,27 +3,26 @@ import { ToggleClick } from './ToggleBtn.type';
 
 export const Wrapper = styled.button`
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-`;
-
-export const Input = styled.input`
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+  width: 50px;
+  border: 0;
+  background: none;
 `;
 
 export const ToggleBar = styled.div<ToggleClick>`
-  ${props => (props.click ? 'right:0' : 'left:0')}
   position: relative;
+  ${props => (props.click ? 'right: 0;' : 'left: 0;')}
   width: 34px;
   height: 14px;
   border-radius: 100px;
-  background: #c2c2c2;
+  background: ${props => (props.click ? '#bbdefb' : '#c2c2c2')};
 `;
 
 export const ToggleCircle = styled.div<ToggleClick>`
   position: absolute;
-  bottom: 0px;
+  ${props => (props.click ? 'right: 0;' : 'left: 0;')};
   width: 20px;
   height: 20px;
   border-radius: 50%;

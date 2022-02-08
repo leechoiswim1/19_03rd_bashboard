@@ -1,23 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { Sample, Nav, ToggleBtn } from 'components';
-import { getRequest } from './api/request';
+import React from 'react';
+import { Nav } from 'components/organisms';
+import { Dashboard } from 'components/pages';
 
-const App = () => {
-  const [toggled, setToggled] = useState(false);
-  useEffect(() => {
-    console.log(getRequest().then(data => console.log(data)));
-  }, []);
-
-  return (
-    <>
-      {/* <div className="App"> */}
+const App = () => (
+  <div className="App">
+    <header>
       <Nav />
-      <Sample sampleId={1} title="Sample">
-        123
-      </Sample>
-      <ToggleBtn title="상담 중인 요청만 보기" clicked={toggled} setToggled={setToggled} />
-      {/* </div> */}
-    </>
-  );
-};
+    </header>
+    <main>
+      <Dashboard />
+    </main>
+  </div>
+);
 export default App;
