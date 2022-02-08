@@ -34,4 +34,4 @@ const LabeledCheckBox = ({
     </S.WrapperLabel>
   );
 };
-export default LabeledCheckBox;
+export default React.memo(LabeledCheckBox);
