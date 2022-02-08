@@ -1,12 +1,16 @@
-import React, { ReactElement, useEffect } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import { DashboardLayout } from 'components/templates';
-import { SCProps } from 'types/props';
 import { getRequest } from 'api/request';
+import { Request } from 'api/request.type';
 
-const Dashboard = ({ children }: SCProps): ReactElement => {
+const Dashboard = (): ReactElement => {
+  const [requests, setRequests] = useState<Request | null>(null);
+
   useEffect(() => {
-    console.log(getRequest().then(data => console.log(data)));
+    getRequest()
+      .then(data => setRequests(data))
+      .catch(e => console.error(e));
   }, []);
-  return <DashboardLayout />;
+  return <DashboardLayout requests={requests} />;
 };
 export default Dashboard;
