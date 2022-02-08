@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Card } from 'components/molecules';
 import { Nav } from 'components/organisms';
+import { Dashboard } from 'components/pages';
 import { getRequest } from './api/request';
 
 const App = () => {
@@ -9,10 +9,12 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-      <Nav />
-      <Card>
-        <div>abc</div>
-      </Card>
+      <header>
+        <Nav />
+      </header>
+      <main>
+        <Dashboard />
+      </main>
     </div>
   );
 };
