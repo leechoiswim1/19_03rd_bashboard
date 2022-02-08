@@ -43,6 +43,5 @@ module.exports = {
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
     'react/jsx-boolean-value': 'off',
   },
-  ignorePatterns: ['.eslintrc.js'],
+  ignorePatterns: ['.eslintrc.js', 'server/*'],
 };
-
