@@ -33,7 +33,7 @@ export const Button = styled.button<Pick<FilterDropProps, 'category'>>`
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
+  margin-right: 4px;
   &:hover {
     cursor: pointer;
     border: 1px solid ${props => props.theme.color.primaryBlue};
@@ -41,5 +41,8 @@ export const Button = styled.button<Pick<FilterDropProps, 'category'>>`
   span {
     font-size: ${props => props.theme.fontSize.xs};
     margin-right: 12px;
+  }
+  ${props => props.theme.breakpoints.tablet} {
+    margin-right: 8px;
   }
 `;

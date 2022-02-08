@@ -3,11 +3,12 @@ import SidebarProps from './Sidebar.type';
 
 export const Overlay = styled.div<SidebarProps>`
   display: ${props => (props.openSideMenu ? 'flex' : 'none')};
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 1;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.2);
   ${props => props.theme.breakpoints.laptop} {
@@ -18,10 +19,11 @@ export const Overlay = styled.div<SidebarProps>`
 export const Wrapper = styled.div<SidebarProps>`
   width: 280px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background: white;
   top: 0;
   left: 0;
+  z-index: 2;
   visibility: ${props => (props.openSideMenu ? 'visible' : 'hidden')};
   transform: ${props => (props.openSideMenu ? 'translateX(0px)' : 'translateX(-100%)')};
   transition: transform 0.5s ease-in-out;
