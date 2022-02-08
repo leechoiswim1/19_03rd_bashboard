@@ -11,6 +11,7 @@ export const ResetWrapper = styled.div`
 
 export const ResetTitle = styled.div`
   margin: auto;
+  white-space: nowrap;
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   font-size: ${({ theme }) => theme.fontSize.xs};
   color: ${({ theme }) => theme.color.primaryBlue};
