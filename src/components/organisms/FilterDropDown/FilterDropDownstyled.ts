@@ -4,7 +4,7 @@ import FilterDropProps from './FilterDropDown.type';
 export const DropDown = styled.ul`
   padding: 17px 12px;
   width: 130px;
-  border: 2px solid ${props => props.theme.color.gray};
+  border: 1px solid ${props => props.theme.color.gray};
   border-radius: 4px;
   display: none;
   position: absolute;
@@ -32,7 +32,7 @@ export const Button = styled.button<FilterDropProps>`
   margin-right: 5px;
   &:hover {
     cursor: pointer;
-    border: 2px solid ${props => props.theme.color.primaryBlue};
+    border: 1px solid ${props => props.theme.color.primaryBlue};
   }
   span {
     font-size: ${props => props.theme.fontSize.xs};
