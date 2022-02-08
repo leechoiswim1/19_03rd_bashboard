@@ -10,6 +10,7 @@ const LabeledCheckBox = ({
   onChange,
   required,
   readOnly,
+  handleCheckList,
 }: SCProps<LabeledCheckBoxProps>): ReactElement => {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -17,8 +18,9 @@ const LabeledCheckBox = ({
     (e: React.ChangeEvent<HTMLInputElement>) => {
       onChange?.(e);
       setIsChecked(!isChecked);
+      handleCheckList(e.target.id);
     },
-    [isChecked, onChange],
+    [isChecked, onChange, handleCheckList],
   );
 
   return (
