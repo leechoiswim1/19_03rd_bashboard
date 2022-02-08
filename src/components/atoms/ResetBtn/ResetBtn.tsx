@@ -1,10 +1,13 @@
 import React, { ReactElement } from 'react';
-import { SCProps } from 'types/props';
-import ResetBtnProps from './ResetBtn.type';
+import { FILTERING_RESET } from 'consts/constants';
+import { ReactComponent as Reset } from 'assets/images/reset.svg';
 import * as S from './ResetBtn.styled';
 
-const ResetBtn = ({ children }: SCProps<ResetBtnProps>): ReactElement => (
-  <S.ResetBtn>{children}</S.ResetBtn>
+const ResetBtn = (): ReactElement => (
+  <S.ResetWrapper>
+    <Reset width="16px" height="16px" />
+    <S.ResetTitle>{FILTERING_RESET}</S.ResetTitle>
+  </S.ResetWrapper>
 );
 
 export default ResetBtn;
