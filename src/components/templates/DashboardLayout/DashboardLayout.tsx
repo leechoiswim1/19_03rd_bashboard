@@ -2,7 +2,6 @@ import React, { ReactElement, useState } from 'react';
 import { ToggleBtn } from 'components/atoms';
 import { FilterBar, NoResults } from 'components/organisms';
 import { Title, Card } from 'components/molecules';
-import { Status, Method, Material } from 'api/request.type';
 import { DashboardLayoutProps } from './DashboardLayout.type';
 import * as S from './DashboardLayout.styled';
 
@@ -12,12 +11,11 @@ const DashboardLayout = ({ requests }: DashboardLayoutProps): ReactElement => {
   return (
     <S.Layout>
       <Title main="들어온 요청" sub="파트너님에게 딱 맞는 요청서를 찾아보세요." />
-
       <S.Box>
+        <FilterBar />
         <ToggleBtn clicked={isConsult} setToggled={setIsConsult} />
         <S.Text>현재 상담 중인 요청만 보기</S.Text>
       </S.Box>
-      <FilterBar />
       <S.RequestCardWrapper>
         {requests.map(request => (
           <Card key={request.id} request={request} />
