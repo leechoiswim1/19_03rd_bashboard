@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { HeadBtn } from 'components';
+import { HeadBtn } from 'components/atoms';
 import * as S from './HeadBtnGroup.styled';
 
 const HeadBtnGroup = (): ReactElement => (

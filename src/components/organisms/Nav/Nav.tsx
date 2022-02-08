@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { HeadBtnGroup, LogoGroup } from 'components';
+import { HeadBtnGroup, LogoGroup } from 'components/molecules';
 import * as S from './Nav.styled';
 
 const Nav = (): ReactElement => (

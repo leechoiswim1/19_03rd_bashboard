@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Logo } from 'components';
+import { Logo } from 'components/atoms';
 import * as S from './LogoGroup.styled';
 
 const LogoGroup = (): ReactElement => (
