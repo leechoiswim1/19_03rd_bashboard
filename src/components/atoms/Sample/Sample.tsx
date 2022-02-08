@@ -3,8 +3,14 @@ import { SCProps } from 'types/props';
 import SampleProps from './Sample.type';
 import * as S from './Sample.styled';
 
-const Sample = ({ className, children, sampleId, title }: SCProps<SampleProps>): ReactElement => (
-  <S.Sample className={className}>
+const Sample = ({
+  className,
+  children,
+  sampleId,
+  title,
+  primary,
+}: SCProps<SampleProps>): ReactElement => (
+  <S.Sample className={className} primary={primary}>
     <span>{sampleId}</span>
     <span>{title}</span>
     {children}
@@ -13,6 +19,7 @@ const Sample = ({ className, children, sampleId, title }: SCProps<SampleProps>):
 
 Sample.defaultProps = {
   title: 'title',
+  primary: false,
 };
 
 export default Sample;
