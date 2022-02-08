@@ -2,7 +2,6 @@ import styled from 'styled-components/macro';
 import { ToggleClick } from './ToggleBtn.type';
 
 export const Wrapper = styled.button`
-  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,6 +9,9 @@ export const Wrapper = styled.button`
   width: 50px;
   border: 0;
   background: none;
+  ${props => props.theme.breakpoints.laptop} {
+    margin-left: auto;
+  }
 `;
 
 export const ToggleBar = styled.div<ToggleClick>`
@@ -18,6 +20,7 @@ export const ToggleBar = styled.div<ToggleClick>`
   width: 34px;
   height: 14px;
   border-radius: 100px;
+  cursor: pointer;
   background: ${props => (props.click ? '#bbdefb' : '#c2c2c2')};
 `;
 

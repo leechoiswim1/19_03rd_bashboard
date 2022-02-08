@@ -13,8 +13,10 @@ const DashboardLayout = ({ requests }: DashboardLayoutProps): ReactElement => {
       <Title main="들어온 요청" sub="파트너님에게 딱 맞는 요청서를 찾아보세요." />
       <S.Box>
         <FilterBar />
-        <ToggleBtn clicked={isConsult} setToggled={setIsConsult} />
-        <S.Text>현재 상담 중인 요청만 보기</S.Text>
+        <S.CSBox>
+          <ToggleBtn clicked={isConsult} setToggled={setIsConsult} />
+          <S.Text>상담 중인 요청만 보기</S.Text>
+        </S.CSBox>
       </S.Box>
       <S.RequestCardWrapper>
         {requests.map(request => (
