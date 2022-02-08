@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Sample, Nav, ToggleBtn } from 'components';
+import { Sample, ToggleBtn } from 'components/atoms';
+import { Nav } from 'components/organisms';
 import { getRequest } from './api/request';
 
 const App = () => {

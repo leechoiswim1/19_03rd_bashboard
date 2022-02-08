@@ -1,14 +1,15 @@
 import styled from 'styled-components/macro';
+import HeadBtnProps from 'components/atoms/HeadBtn/HeadBtn.type';
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.section<HeadBtnProps>`
   width: 210px;
   height: 20px;
   color: white;
-  display: flex;
+  display: ${props => (props.path === 'sidebar' ? 'block' : 'flex')};
   justify-content: space-between;
-  line-height: 20px;
-  @media (max-width: 480px) {
-    display: none;
+  line-height: ${props => props.theme.lineHeight.l};
+  ${props => props.theme.breakpoints.mobile} {
+    display: ${props => props.path === 'Nav' && 'none'};
   }
 `;
 
