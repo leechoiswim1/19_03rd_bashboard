@@ -7,8 +7,8 @@ const Logo = ({ path }: LogoProps): ReactElement => {
   const newCompanyName = companyName.split(' ');
   return (
     <S.Wrapper path={path}>
-      <S.Strong>{newCompanyName[0]}</S.Strong>
-      <S.Text>{newCompanyName[1]}</S.Text>
+      <S.Strong path={path}>{newCompanyName[0]}</S.Strong>
+      <S.Text path={path}>{newCompanyName[1]}</S.Text>
     </S.Wrapper>
   );
 };
