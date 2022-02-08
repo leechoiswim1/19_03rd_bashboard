@@ -1,5 +1,6 @@
 import React, { ReactElement, useEffect, useState } from 'react';
 import { ToggleBtn } from 'components/atoms';
+import { Filter, NoResults } from 'components/organisms';
 import { Title, Card } from 'components/molecules';
 import { Filter } from 'components/organisms';
 import { getRequest } from 'api/request';
@@ -31,6 +32,7 @@ const DashboardLayout = (): ReactElement => {
           <Card key={_.id} requests={_} />
         ))}
       </S.RequestCardWrapper>
+      <NoResults />
     </S.Layout>
   );
 };
