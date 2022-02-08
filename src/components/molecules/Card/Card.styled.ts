@@ -34,6 +34,7 @@ export const Due = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
+  margin-bottom: 32px;
 `;
 
 export const ContentTitle = styled.div`
