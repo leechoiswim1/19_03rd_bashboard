@@ -8,6 +8,7 @@ import {
   CARD_MATERIAL,
   CARD_REQUEST_DETAILS,
   CARD_CHATTING,
+  CARD_UNTIL,
 } from 'consts/constants';
 import { SCProps } from 'types/props';
 import CardProps from './Card.type';
@@ -20,7 +21,10 @@ const Card: React.FC<CardProps> = ({ requests }) => (
       {requests.status === COUNSELING && <CounselingBtn>{COUNSELING}</CounselingBtn>}
     </S.TitleWrapper>
     <S.Client>{requests.client}</S.Client>
-    <S.Due>{requests.due}</S.Due>
+    <S.Due>
+      {requests.due}
+      {CARD_UNTIL}
+    </S.Due>
     <Divider margin="0 0 32px 0" />
     <S.ContentWrapper>
       <S.ContentTitle>{CARD_COUNT}</S.ContentTitle>
