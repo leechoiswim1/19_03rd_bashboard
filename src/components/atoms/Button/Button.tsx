@@ -4,11 +4,11 @@ import ButtonProps from './Button.type';
 import * as S from './Button.styled';
 
 const Button = ({ children, primary }: SCProps<ButtonProps>): ReactElement => (
-  <S.Button primary>{children}</S.Button>
+  <S.Button primary={primary}>{children}</S.Button>
 );
 
 Button.defaultProps = {
-  primary: 'primary',
+  primary: false,
 };
 
 export default Button;

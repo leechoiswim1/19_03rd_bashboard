@@ -7,6 +7,7 @@ interface IButton {
 
 export const Button = styled.button`
   padding: 6px 12px;
+  margin: 0 8px;
   border-radius: 4px;
   border: 1px solid
     ${(props: IButton) =>

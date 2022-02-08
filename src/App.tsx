@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sample } from 'components/atoms';
+import { Sample, Button } from 'components/atoms';
 import { Nav } from 'components/organisms';
 import { Dashboard } from 'components/pages';
 
@@ -14,6 +14,7 @@ const App = () => (
           123
         </Sample>
       </Dashboard>
+      <Button>가나다</Button>
     </main>
   </div>
 );
