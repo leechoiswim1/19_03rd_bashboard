@@ -1,12 +1,9 @@
 import React from 'react';
-import { Sample, Nav } from 'components';
+import { Nav } from 'components/organisms';
 
 const App = () => (
   <div className="App">
     <Nav />
-    <Sample sampleId={1} title="Sample">
-      123
-    </Sample>
   </div>
 );
 
