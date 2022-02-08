@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { FilterDropDown } from 'components/organisms';
 import { ResetBtn } from 'components/atoms';
-import { filterCategory } from 'consts/constants';
+import { FILTER_CATEGORY } from 'consts/constants';
 import FilterDropProps from '../FilterDropDown/FilterDropDown.type';
 
 import * as S from './FilterBar.styled';
@@ -13,8 +13,8 @@ const FilterBar = ({
   setCheckedMaterial,
 }: FilterDropProps): ReactElement => (
   <S.FilterBarWrap>
-    {filterCategory &&
-      filterCategory.map(
+    {FILTER_CATEGORY &&
+      FILTER_CATEGORY.map(
         (category: string): ReactElement => (
           <FilterDropDown
             key={category}
@@ -26,7 +26,7 @@ const FilterBar = ({
           />
         ),
       )}
-    {filterCategory && <ResetBtn />}
+    {FILTER_CATEGORY && <ResetBtn />}
   </S.FilterBarWrap>
 );
 
