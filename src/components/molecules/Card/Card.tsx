@@ -1,39 +1,46 @@
-import React, { ReactElement, useEffect, useState, SetStateAction } from 'react';
-import { getRequest } from 'api/request';
-import { Request } from 'api/request.type';
-import { Divider, Button } from 'components/atoms';
+import React, { ReactElement } from 'react';
+import { Divider, Button, CounselingBtn } from 'components/atoms';
+import {
+  COUNSELING,
+  CARD_COUNT,
+  CARD_AMOUNT,
+  CARD_METHOD,
+  CARD_MATERIAL,
+  CARD_REQUEST_DETAILS,
+  CARD_CHATTING,
+} from 'consts/constants';
 import { SCProps } from 'types/props';
 import CardProps from './Card.type';
 import * as S from './Card.styled';
 
-const Card = ({ children }: SCProps<CardProps>): ReactElement => (
+const Card: React.FC<CardProps> = ({ requests }) => (
   <S.CardWrapper>
     <S.TitleWrapper>
-      <S.Title>자동차 시제품 제작</S.Title>
-      <div>abc</div>
+      <S.Title>{requests.title}</S.Title>
+      {requests.status === COUNSELING && <CounselingBtn>{COUNSELING}</CounselingBtn>}
     </S.TitleWrapper>
-    <S.Client>A 고객사</S.Client>
-    <S.Due>2020.12.14까지 납기</S.Due>
+    <S.Client>{requests.client}</S.Client>
+    <S.Due>{requests.due}</S.Due>
     <Divider margin="0 0 32px 0" />
     <S.ContentWrapper>
-      <S.ContentTitle>도면 개수</S.ContentTitle>
-      <S.Contents>2개</S.Contents>
+      <S.ContentTitle>{CARD_COUNT}</S.ContentTitle>
+      <S.Contents>{requests.count}개</S.Contents>
     </S.ContentWrapper>
     <S.ContentWrapper>
-      <S.ContentTitle>총 수량</S.ContentTitle>
-      <S.Contents>100개</S.Contents>
+      <S.ContentTitle>{CARD_AMOUNT}</S.ContentTitle>
+      <S.Contents>{requests.amount}개</S.Contents>
     </S.ContentWrapper>
     <S.ContentWrapper>
-      <S.ContentTitle>가공방식</S.ContentTitle>
-      <S.Contents>밀링, 선반</S.Contents>
+      <S.ContentTitle>{CARD_METHOD}</S.ContentTitle>
+      <S.Contents>{requests.method.join(', ')}</S.Contents>
     </S.ContentWrapper>
     <S.ContentWrapper>
-      <S.ContentTitle>재료</S.ContentTitle>
-      <S.Contents>알루미늄</S.Contents>
+      <S.ContentTitle>{CARD_MATERIAL}</S.ContentTitle>
+      <S.Contents>{requests.material.join(', ')}</S.Contents>
     </S.ContentWrapper>
     <S.ButtonWrapper>
-      <Button primary>요청 내역 보기</Button>
-      <Button>채팅하기</Button>
+      <Button primary>{CARD_REQUEST_DETAILS}</Button>
+      <Button>{CARD_CHATTING}</Button>
     </S.ButtonWrapper>
   </S.CardWrapper>
 );

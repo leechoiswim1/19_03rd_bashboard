@@ -4,8 +4,10 @@ export const CardWrapper = styled.div`
   width: 100%;
   padding: 24px 16px;
   border: 1px solid ${({ theme }) => theme.color.borderGray};
+  transition: all ease 0.1s;
   &:hover {
     border: 2px solid ${({ theme }) => theme.color.primaryBlue};
+    padding: 22px 14px;
   }
   border-radius: 4px;
 `;

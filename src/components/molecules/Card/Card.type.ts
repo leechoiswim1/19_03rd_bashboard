@@ -1,5 +1,6 @@
 import { ReactChild } from 'react';
+import { Request } from 'api/request.type';
 
 export default interface CardProps {
-  children: ReactChild;
+  requests: Request;
 }

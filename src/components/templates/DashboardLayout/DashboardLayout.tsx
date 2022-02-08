@@ -1,12 +1,21 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import { ToggleBtn } from 'components/atoms';
 import { Title, Card } from 'components/molecules';
 import { Filter } from 'components/organisms';
+import { getRequest } from 'api/request';
+import { Request } from 'api/request.type';
 import * as S from './DashboardLayout.styled';
 
 const DashboardLayout = (): ReactElement => {
   const [toggled, setToggled] = useState(false);
+  const [list, setList] = useState<Request[]>([]);
   const cardsList = Array.from({ length: 5 }, (_, index) => index);
+
+  useEffect(() => {
+    getRequest()
+      .then(data => setList(data))
+      .catch(error => console.error(error));
+  }, []);
 
   return (
     <S.Layout>
@@ -17,9 +26,9 @@ const DashboardLayout = (): ReactElement => {
       </S.Box>
       <Filter />
       <S.RequestCardWrapper>
-        {cardsList.map((_, index) => (
+        {list.map((_, index) => (
           // eslint-disable-next-line react/no-array-index-key
-          <Card key={index} />
+          <Card key={_.id} requests={_} />
         ))}
       </S.RequestCardWrapper>
     </S.Layout>
