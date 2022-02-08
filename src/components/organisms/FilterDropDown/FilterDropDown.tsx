@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import React, { ReactElement } from 'react';
 import LabeledCheckBox from 'components/molecules/LabeledCheckBox/LabeledCheckBox';
-import { processMethod, materialList } from 'consts/constants';
+import { PROCESS_METHOD, MATERIAL_LIST } from 'consts/constants';
 import { ReactComponent as ArrowDown } from 'assets/images/arrowDown.svg';
 import { Material, Method } from 'api/request.type';
 import FilterDropProps from './FilterDropDown.type';
@@ -32,12 +32,22 @@ const FilterDropDown = ({
 
   return (
     <S.DropDownWrap>
-      <S.Button category={category}>
-        <span>{category}</span>
+      <S.Button
+        category={category}
+        primary={
+          category === '가공방식' ? checkedMethod.length !== 0 : checkedMaterial.length !== 0
+        }
+      >
+        <span>
+          {category}
+          {category === '가공방식'
+            ? checkedMethod.length !== 0 && `(${checkedMethod.length})`
+            : checkedMaterial.length !== 0 && `(${checkedMaterial.length})`}
+        </span>
         <ArrowDown />
       </S.Button>
       <S.DropDown>
-        {(category === '가공방식' ? processMethod : materialList).map(
+        {(category === '가공방식' ? PROCESS_METHOD : MATERIAL_LIST).map(
           (method: string): ReactElement => (
             <LabeledCheckBox
               key={method}

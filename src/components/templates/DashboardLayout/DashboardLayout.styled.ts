@@ -43,13 +43,26 @@ export const RequestCardWrapper = styled.div`
 `;
 
 export const Box = styled.div`
-  display: flex;
-  align-items: center;
+  ${props => props.theme.breakpoints.laptop} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const Text = styled.span`
   padding-left: 10px;
   font-size: 14px;
   font-weight: 500;
+  white-space: nowrap;
   color: ${({ theme }) => theme.color.black};
+`;
+
+export const CSBox = styled.div`
+  display: flex;
+  margin-bottom: 32px;
+  align-items: center;
+  ${props => props.theme.breakpoints.laptop} {
+    margin: 0px;
+  }
 `;

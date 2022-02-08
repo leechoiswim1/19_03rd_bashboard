@@ -21,6 +21,7 @@ export const TitleWrapper = styled.div`
 
 export const Title = styled.h3`
   color: ${({ theme }) => theme.color.black};
+  margin-bottom: 4px;
   font-size: ${({ theme }) => theme.fontSize.m};
   font-weight: ${({ theme }) => theme.fontWeight.strong};
   line-height: ${({ theme }) => theme.lineHeight.m};
