@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { ReactComponent as Hambuger } from 'styles/images/hamburger.svg';
+import { ReactComponent as Hambuger } from 'assets/images/hamburger.svg';
 
 export const Wrapper = styled.div`
   @media (max-width: 768px) {

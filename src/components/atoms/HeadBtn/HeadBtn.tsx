@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { ReactComponent as Office } from 'styles/images/office.svg';
+import { ReactComponent as Office } from 'assets/images/office.svg';
 import * as S from './HeadBtn.styled';
 import HeadBtnProps from './HeadBtn.type';
 
