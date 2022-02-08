@@ -1,11 +1,15 @@
 import React, { ReactElement } from 'react';
-import { HeadBtnGroup, LogoGroup } from 'components';
+import { HeadBtnGroup, LogoGroup } from 'components/molecules';
+import { Sidebar } from 'components/organisms';
 import * as S from './Nav.styled';
 
 const Nav = (): ReactElement => (
   <S.Wrapper>
-    <LogoGroup />
-    <HeadBtnGroup />
+    <S.NavBar>
+      <LogoGroup />
+      <HeadBtnGroup />
+    </S.NavBar>
+    <Sidebar />
   </S.Wrapper>
 );
 
