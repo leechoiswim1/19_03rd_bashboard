@@ -10,7 +10,7 @@ export const Overlay = styled.div<SidebarProps>`
   height: 100vh;
   z-index: 1;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   ${props => props.theme.breakpoints.laptop} {
     display: none;
   }
