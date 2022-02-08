@@ -1,12 +1,20 @@
 import React from 'react';
-import { Sample, Nav } from 'components';
+import { Sample } from 'components/atoms';
+import { Nav } from 'components/organisms';
+import { Dashboard } from 'components/pages';
 
 const App = () => (
   <div className="App">
-    <Nav />
-    <Sample sampleId={1} title="Sample">
-      123
-    </Sample>
+    <header>
+      <Nav />
+    </header>
+    <main>
+      <Dashboard>
+        <Sample sampleId={1} title="Sample">
+          123
+        </Sample>
+      </Dashboard>
+    </main>
   </div>
 );
 
