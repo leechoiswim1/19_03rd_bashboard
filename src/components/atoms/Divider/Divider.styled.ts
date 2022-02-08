@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 
 interface IDivider {
   width: number;
+  margin: string;
 }
 
 export const Divider = styled.hr`
@@ -10,5 +11,6 @@ export const Divider = styled.hr`
   border: 0;
   border-top: 1px solid ${({ theme }) => theme.color.borderGray};
   height: 1px;
-  width: 0 ${(props: IDivider) => props.width}%;
+  width: ${(props: IDivider) => props.width}%;
+  margin: ${(props: IDivider) => props.margin};
 `;
