@@ -2,6 +2,7 @@ import styled from 'styled-components/macro';
 import { ToggleClick } from './ToggleBtn.type';
 
 export const Wrapper = styled.button`
+  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
