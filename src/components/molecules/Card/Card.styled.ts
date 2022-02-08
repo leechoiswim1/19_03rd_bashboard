@@ -6,8 +6,7 @@ export const CardWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.color.borderGray};
   transition: all ease 0.1s;
   &:hover {
-    border: 2px solid ${({ theme }) => theme.color.primaryBlue};
-    padding: 23px 15px;
+    outline: 2px solid ${({ theme }) => theme.color.primaryBlue};
   }
   border-radius: 4px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
