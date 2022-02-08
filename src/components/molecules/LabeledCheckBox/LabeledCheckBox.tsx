@@ -1,6 +1,7 @@
 import React, { ReactElement, useCallback, useState } from 'react';
 import { CheckBox } from 'components/atoms';
 import { SCProps } from 'types/props';
+import { Material, Method } from 'api/request.type';
 import * as S from './LabledCheckBox.styled';
 import { LabeledCheckBoxProps } from './LabeledCheckBox.type';
 
@@ -18,7 +19,7 @@ const LabeledCheckBox = ({
     (e: React.ChangeEvent<HTMLInputElement>) => {
       onChange?.(e);
       setIsChecked(!isChecked);
-      handleCheckList(e.target.id);
+      handleCheckList(e.target.id as Material | Method);
     },
     [isChecked, onChange, handleCheckList],
   );
