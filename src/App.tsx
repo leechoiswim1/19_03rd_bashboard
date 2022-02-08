@@ -1,22 +1,19 @@
-import React from 'react';
-import { Sample, Divider } from 'components/atoms';
+import React, { useEffect } from 'react';
+import { Card } from 'components/molecules';
 import { Nav } from 'components/organisms';
-import { Dashboard } from 'components/pages';
+import { getRequest } from './api/request';
 
-const App = () => (
-  <div className="App">
-    <header>
+const App = () => {
+  useEffect(() => {
+    console.log(getRequest().then(data => console.log(data)));
+  }, []);
+  return (
+    <div className="App">
       <Nav />
-    </header>
-    <main>
-      <Dashboard>
-        <Sample sampleId={1} title="Sample" primary>
-          123
-        </Sample>
-      </Dashboard>
-      <Divider width={50} />
-    </main>
-  </div>
-);
-
+      <Card>
+        <div>abc</div>
+      </Card>
+    </div>
+  );
+};
 export default App;

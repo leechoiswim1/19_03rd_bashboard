@@ -12,14 +12,29 @@ export const theme: DefaultTheme = {
   },
 
   fontSize: {
-    s: '14pt',
-    m: '16pt',
-    l: '20pt',
+    xs: '12px',
+    s: '14px',
+    m: '16px',
+    l: '20px',
+    xl: '24px',
+  },
+
+  fontWeight: {
+    strong: 800,
+    semiStrong: 500,
+    normal: 400,
   },
 
   lineHeight: {
     s: 1.42,
     m: 1.5,
     l: 1.6,
+  },
+
+  breakpoints: {
+    mobile: '@media screen and (max-width: 480px)',
+    tablet: '@media screen and (min-width: 481px)',
+    laptop: '@media screen and (min-width: 769px)',
+    desktop: '@media screen and (min-width: 1025px)',
   },
 };
