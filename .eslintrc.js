@@ -41,6 +41,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off', // props를 spread로 풀어 사용할 수 있음.
     'linebreak-style': ['error', require('os').EOL === '\r\n' ? 'windows' : 'unix'],
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'react/jsx-boolean-value': 'off',
   },
   ignorePatterns: ['.eslintrc.js'],
 };
