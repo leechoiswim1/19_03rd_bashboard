@@ -12,14 +12,20 @@ export const theme: DefaultTheme = {
   },
 
   fontSize: {
-    s: '14pt',
-    m: '16pt',
-    l: '20pt',
+    s: '14px',
+    m: '16px',
+    l: '20px',
   },
 
   lineHeight: {
     s: 1.42,
     m: 1.5,
     l: 1.6,
+  },
+
+  breakpoints: {
+    tablet: '@media screen and (min-width: 481px)',
+    laptop: '@media screen and (min-width: 769px)',
+    desktop: '@media screen and (min-width: 1025px)',
   },
 };

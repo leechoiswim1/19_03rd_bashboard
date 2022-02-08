@@ -21,5 +21,10 @@ declare module 'styled-components' {
       m: number;
       l: number;
     };
+    breakpoints: {
+      tablet: string;
+      laptop: string;
+      desktop: string;
+    };
   }
 }
