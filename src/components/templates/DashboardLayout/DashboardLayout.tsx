@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import { ToggleBtn } from 'components/atoms';
 import { Title } from 'components/molecules';
-import { Filter } from 'components/organisms';
+import { Filter, NoResults } from 'components/organisms';
 import * as S from './DashboardLayout.styled';
 
 const DashboardLayout = (): ReactElement => {
@@ -22,6 +22,7 @@ const DashboardLayout = (): ReactElement => {
           <S.DummyCard key={index} />
         ))}
       </S.RequestCardWrapper>
+      <NoResults />
     </S.Layout>
   );
 };
