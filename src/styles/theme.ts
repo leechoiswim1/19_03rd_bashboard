@@ -12,10 +12,17 @@ export const theme: DefaultTheme = {
   },
 
   fontSize: {
+    xs: '12px',
     s: '14px',
     m: '16px',
     l: '20px',
     xl: '24px',
+  },
+
+  fontWeight: {
+    strong: 800,
+    semiStrong: 500,
+    normal: 400,
   },
 
   lineHeight: {

@@ -12,10 +12,16 @@ declare module 'styled-components' {
       orange: string;
     };
     fontSize: {
+      xs: string;
       s: string;
       m: string;
       l: string;
       xl: string;
+    };
+    fontWeight: {
+      strong: number;
+      semiStrong: number;
+      normal: number;
     };
     lineHeight: {
       s: number;

@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Request } from './request.type';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: process.env.REACT_APP_BASE_URL,
 });
 
 export const getRequest = async (): Promise<Request[]> => {
