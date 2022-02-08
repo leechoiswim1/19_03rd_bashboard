@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import { ToggleBtn } from 'components/atoms';
 import { Title } from 'components/molecules';
+import { Filter } from 'components/organisms';
 import * as S from './DashboardLayout.styled';
 
 const DashboardLayout = (): ReactElement => {
@@ -14,6 +15,7 @@ const DashboardLayout = (): ReactElement => {
         <ToggleBtn clicked={toggled} setToggled={setToggled} />
         <S.Text>현재 상담 중인 요청만 보기</S.Text>
       </S.Box>
+      <Filter />
       <S.RequestCardWrapper>
         {cardsList.map((_, index) => (
           // eslint-disable-next-line react/no-array-index-key
