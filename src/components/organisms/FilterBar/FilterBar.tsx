@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 import { FilterDropDown } from 'components/organisms';
 import { ResetBtn } from 'components/atoms';
 import { filterCategory } from 'consts/constants';
