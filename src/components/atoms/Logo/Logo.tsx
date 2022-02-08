@@ -1,11 +1,16 @@
 import React, { ReactElement } from 'react';
+import { companyName } from 'consts/constants';
+import LogoProps from './Logo.type';
 import * as S from './Logo.styled';
 
-const Logo = (): ReactElement => (
-  <S.Wrapper>
-    <S.Strong>CAPA</S.Strong>
-    <S.Text>파트너스</S.Text>
-  </S.Wrapper>
-);
+const Logo = ({ path }: LogoProps): ReactElement => {
+  const newCompanyName = companyName.split(' ');
+  return (
+    <S.Wrapper path={path}>
+      <S.Strong>{newCompanyName[0]}</S.Strong>
+      <S.Text>{newCompanyName[1]}</S.Text>
+    </S.Wrapper>
+  );
+};
 
 export default Logo;
