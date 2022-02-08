@@ -3,6 +3,7 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     color: {
+      primaryDeepBlue: string;
       primaryBlue: string;
       navblue: string;
       black: string;

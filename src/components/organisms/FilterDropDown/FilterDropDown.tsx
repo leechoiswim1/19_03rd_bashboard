@@ -32,8 +32,18 @@ const FilterDropDown = ({
 
   return (
     <S.DropDownWrap>
-      <S.Button category={category}>
-        <span>{category}</span>
+      <S.Button
+        category={category}
+        primary={
+          category === '가공방식' ? checkedMethod.length !== 0 : checkedMaterial.length !== 0
+        }
+      >
+        <span>
+          {category}
+          {category === '가공방식'
+            ? checkedMethod.length !== 0 && `(${checkedMethod.length})`
+            : checkedMaterial.length !== 0 && `(${checkedMaterial.length})`}
+        </span>
         <ArrowDown />
       </S.Button>
       <S.DropDown>

@@ -24,8 +24,7 @@ export const DropDownWrap = styled.div`
   }
 `;
 
-export const Button = styled.button<Pick<FilterDropProps, 'category'>>`
-  width: ${props => (props.category === '가공방식' ? '98px' : '76px')};
+export const Button = styled.button<Pick<FilterDropProps, 'category'> & { primary: boolean }>`
   background: none;
   height: 32px;
   display: flex;
@@ -33,14 +32,23 @@ export const Button = styled.button<Pick<FilterDropProps, 'category'>>`
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  margin-right: 4px;
+  margin-right: 8px;
+  padding: 9px 12px;
+  background-color: ${props => props.primary && props.theme.color.primaryDeepBlue};
+
   &:hover {
     cursor: pointer;
     border: 1px solid ${props => props.theme.color.primaryBlue};
   }
+
   span {
     font-size: ${props => props.theme.fontSize.xs};
     margin-right: 12px;
+    margin-bottom: 3px;
+    color: ${props => props.primary && props.theme.color.white};
+  }
+  svg {
+    color: ${props => (props.primary ? props.theme.color.white : props.theme.color.gray)};
   }
   ${props => props.theme.breakpoints.tablet} {
     margin-right: 8px;
