@@ -2,7 +2,6 @@ import React, { ReactElement, useState } from 'react';
 import { ToggleBtn } from 'components/atoms';
 import { Filter, NoResults } from 'components/organisms';
 import { Title, Card } from 'components/molecules';
-import { Filter } from 'components/organisms';
 import { Status, Method, Material } from 'api/request.type';
 import { DashboardLayoutProps } from './DashboardLayout.type';
 import * as S from './DashboardLayout.styled';
