@@ -5,4 +5,5 @@ export interface CheckBoxProps {
   value?: string;
   checked?: boolean;
   readOnly?: boolean;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }

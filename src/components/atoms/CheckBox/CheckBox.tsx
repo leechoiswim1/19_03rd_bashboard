@@ -9,6 +9,7 @@ const CheckBox = ({
   checked,
   required,
   readOnly,
+  onChange,
 }: SCProps<CheckBoxProps>): ReactElement => (
   <S.CheckBox
     className={className}
@@ -17,6 +18,7 @@ const CheckBox = ({
     checked={checked}
     required={required}
     readOnly={readOnly}
+    onChange={onChange}
   />
 );
 export default CheckBox;
