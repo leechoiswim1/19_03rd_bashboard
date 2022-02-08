@@ -16,4 +16,5 @@ export const Button = styled.button`
     props.primary ? ({ theme }) => theme.color.primaryBlue : ({ theme }) => theme.color.white};
   color: ${(props: IButton) =>
     props.primary ? ({ theme }) => theme.color.white : ({ theme }) => theme.color.primaryBlue};
+  cursor: pointer;
 `;
