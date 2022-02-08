@@ -17,3 +17,15 @@ export const RequestCardWrapper = styled.div`
   flex-direction: column;
   gap: 16px;
 `;
+
+export const Box = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Text = styled.span`
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.color.black};
+`;
