@@ -7,6 +7,9 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
   line-height: 20px;
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const Divider = styled.section`
