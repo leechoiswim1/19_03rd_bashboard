@@ -1,3 +1,10 @@
 export const companyName = 'CAPA 파트너스';
 export const navigatorBtn = ['A 가공업체', '로그아웃'];
 export const sideBarBtn = ['파트너정밀가공', '로그아웃'];
+export const COUNSELING = '상담중';
+export const CARD_COUNT = '도면 개수';
+export const CARD_AMOUNT = '총 수량';
+export const CARD_METHOD = '가공방식';
+export const CARD_MATERIAL = '재료';
+export const CARD_REQUEST_DETAILS = '요청 내역 보기';
+export const CARD_CHATTING = '채팅하기';

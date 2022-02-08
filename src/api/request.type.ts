@@ -6,8 +6,8 @@ export interface Request {
   id: number;
   title: string;
   client: string;
-  due?: string;
-  count?: number;
+  due: string;
+  count: number;
   amount: number;
   method: Method[];
   material: Material[];
