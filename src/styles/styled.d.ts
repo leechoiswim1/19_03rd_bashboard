@@ -9,7 +9,7 @@ declare module 'styled-components' {
       white: string;
       gray: string;
       borderGray: string;
-      orange: string; 
+      orange: string;
     };
     fontSize: {
       s: string;
@@ -21,6 +21,5 @@ declare module 'styled-components' {
       m: number;
       l: number;
     };
-
   }
 }
