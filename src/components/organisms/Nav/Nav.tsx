@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
-import { Logo, HeadBtnGroup } from 'components';
+import { HeadBtnGroup, LogoGroup } from 'components';
 import * as S from './Nav.styled';
 
 const Nav: React.FC = (): ReactElement => (
   <S.Wrapper>
-    <Logo />
+    <LogoGroup />
     <HeadBtnGroup />
   </S.Wrapper>
 );
