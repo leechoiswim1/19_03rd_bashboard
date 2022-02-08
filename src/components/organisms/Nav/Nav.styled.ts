@@ -13,5 +13,6 @@ export const NavBar = styled.div`
 
   @media (max-width: 768px) {
     height: 44px;
+    padding: 10px 20px;
   }
 `;
