@@ -11,6 +11,7 @@ declare module 'styled-components' {
       borderGray: string;
       orange: string;
     };
+
     fontSize: {
       xs: string;
       s: string;
@@ -18,16 +19,19 @@ declare module 'styled-components' {
       l: string;
       xl: string;
     };
+
     fontWeight: {
       strong: number;
       semiStrong: number;
       normal: number;
     };
+
     lineHeight: {
       s: number;
       m: number;
       l: number;
     };
+
     breakpoints: {
       mobile: string;
       tablet: string;

@@ -8,6 +8,7 @@ import {
   CARD_MATERIAL,
   CARD_REQUEST_DETAILS,
   CARD_CHATTING,
+  CARD_UNTIL,
 } from 'consts/constants';
 import CardProps from './Card.type';
 import * as S from './Card.styled';
@@ -19,7 +20,10 @@ const Card = ({ request }: CardProps): ReactElement => (
       {request.status === COUNSELING && <CounselingBtn>{COUNSELING}</CounselingBtn>}
     </S.TitleWrapper>
     <S.Client>{request.client}</S.Client>
-    <S.Due>{request.due}</S.Due>
+    <S.Due>
+      {request.due}
+      {CARD_UNTIL}
+    </S.Due>
     <Divider margin="0 0 32px 0" />
     <S.ContentWrapper>
       <S.ContentTitle>{CARD_COUNT}</S.ContentTitle>
