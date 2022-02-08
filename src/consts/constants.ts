@@ -9,3 +9,4 @@ export const CARD_MATERIAL = '재료';
 export const CARD_REQUEST_DETAILS = '요청 내역 보기';
 export const CARD_CHATTING = '채팅하기';
 export const CARD_UNTIL = '까지 납기';
+export const FILTERING_RESET = '필터링 리셋';
