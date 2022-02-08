@@ -23,28 +23,14 @@ const DashboardLayout = ({ requests }: DashboardLayoutProps): ReactElement => {
     return false;
   };
 
-  const filter = ({
-    status,
-    method = [],
-    material = [],
-  }: {
-    status: Status;
-    method: Method[];
-    material: Material[];
-  }) => {
-    if (status === '대기중' && method.length === 0 && material.length === 0) return requests;
-
-    return requests
-      .filter(({ status: _status }) =>
-        status === '대기중' ? true : _status === '대기중' ? false : true,
-      )
-      .filter(({ method: _method }) =>
-        method.length === 0 ? true : isIncludeElementAtLeatOne(method, _method),
-      )
-      .filter(({ material: _material }) =>
-        material.length === 0 ? true : isIncludeElementAtLeatOne(material, _material),
-      );
-  };
+  const filteredRequests = requests
+    .filter(({ status }) => (!isConsult ? true : status === '대기중' ? false : true))
+    .filter(({ method }) =>
+      checkedMethod.length === 0 ? true : isIncludeElementAtLeatOne(checkedMethod, method),
+    )
+    .filter(({ material }) =>
+      checkedMaterial.length === 0 ? true : isIncludeElementAtLeatOne(checkedMaterial, material),
+    );
 
   return (
     <S.Layout>
@@ -59,15 +45,11 @@ const DashboardLayout = ({ requests }: DashboardLayoutProps): ReactElement => {
         <ToggleBtn clicked={isConsult} setToggled={setIsConsult} />
         <S.Text>상담 중인 요청만 보기</S.Text>
       </S.Box>
-      {requests.length === 0 ? (
+      {filteredRequests.length === 0 ? (
         <NoResults />
       ) : (
         <S.RequestCardWrapper>
-          {filter({
-            status: isConsult ? '상담중' : '대기중',
-            method: checkedMethod,
-            material: checkedMaterial,
-          }).map(request => (
+          {filteredRequests.map(request => (
             <Card key={request.id} request={request} />
           ))}
         </S.RequestCardWrapper>
