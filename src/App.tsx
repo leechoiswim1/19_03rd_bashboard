@@ -1,8 +1,9 @@
 import React from 'react';
-import { Sample } from 'components';
+import { Sample, Nav } from 'components';
 
 const App = () => (
   <div className="App">
+    <Nav />
     <Sample sampleId={1} title="Sample">
       123
     </Sample>
