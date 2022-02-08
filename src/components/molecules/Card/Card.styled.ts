@@ -6,10 +6,12 @@ export const CardWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.color.borderGray};
   transition: all ease 0.1s;
   &:hover {
-    border: 2px solid ${({ theme }) => theme.color.primaryBlue};
-    padding: 22px 14px;
+    outline: 2px solid ${({ theme }) => theme.color.primaryBlue};
   }
   border-radius: 4px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 344px;
+  } ;
 `;
 
 export const TitleWrapper = styled.div`
@@ -50,14 +52,16 @@ export const ContentWrapper = styled.div`
 export const ContentTitle = styled.div`
   color: ${({ theme }) => theme.color.black};
   font-weight: ${({ theme }) => theme.fontWeight.normal};
-  flex: 1 1;
+  width: 70px;
+  margin-right: 32px;
+  // flex: 1.2 1;
 `;
 
 export const Contents = styled.div`
   color: ${({ theme }) => theme.color.black};
   font-weight: ${({ theme }) => theme.fontWeight.strong};
   font-weight: 700;
-  flex: 2 1;
+  // flex: 3 1;
 `;
 
 export const ButtonWrapper = styled.div`
