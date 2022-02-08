@@ -3,23 +3,23 @@ import LogoProps from './Logo.type';
 
 export const Wrapper = styled.section<LogoProps>`
   width: ${props => (props.path === 'sidebar' ? 'auto' : '153px')};
-  color: ${props => (props.path === 'sidebar' ? '#2196F3' : 'white')};
+  color: ${props =>
+    props.path === 'sidebar' ? props.theme.color.primaryBlue : props.theme.color.white};
   display: flex;
   align-items: center;
+  line-height: ${props => props.theme.lineHeight.m};
 `;
 export const Strong = styled.span<LogoProps>`
   font-weight: 900;
-  font-size: ${props => (props.path === 'sidebar' ? '16px' : '24px')};
-  line-height: 20px;
-  @media (max-width: 768px) {
-    font-size: 16px;
+  font-size: ${props => props.theme.fontSize.m};
+  ${props => props.theme.breakpoints.laptop} {
+    font-size: ${props => props.theme.fontSize.xl};
   }
 `;
 export const Text = styled.span<LogoProps>`
-  line-height: 20px;
   margin-left: 5px;
-  font-size: ${props => (props.path === 'sidebar' ? '14px' : '18px')};
-  @media (max-width: 768px) {
-    font-size: 14px;
+  font-size: ${props => props.theme.fontSize.s};
+  ${props => props.theme.breakpoints.laptop} {
+    font-size: ${props => props.theme.fontSize.l};
   }
 `;

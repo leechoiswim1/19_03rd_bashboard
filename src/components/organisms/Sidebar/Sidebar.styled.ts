@@ -10,7 +10,7 @@ export const Overlay = styled.div<SidebarProps>`
   height: 100vh;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.2);
-  @media (min-width: 769px) {
+  ${props => props.theme.breakpoints.laptop} {
     display: none;
   }
 `;
@@ -25,14 +25,14 @@ export const Wrapper = styled.div<SidebarProps>`
   visibility: ${props => (props.openSideMenu ? 'visible' : 'hidden')};
   transform: ${props => (props.openSideMenu ? 'translateX(0px)' : 'translateX(-100%)')};
   transition: transform 0.5s ease-in-out;
-  @media (min-width: 769px) {
+  ${props => props.theme.breakpoints.laptop} {
     display: none;
   }
 `;
 
 export const Header = styled.div`
   height: 44px;
-  border-bottom: 2px solid #e5e5e5;
+  border-bottom: 2px solid ${props => props.theme.color.borderGray};
   box-sizing: border-box;
   padding: 16px 20px;
   display: flex;

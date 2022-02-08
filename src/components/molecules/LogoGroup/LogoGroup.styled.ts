@@ -11,15 +11,13 @@ export const HamburgerWrap = styled.button`
   border: none;
   padding: 0px;
   cursor: pointer;
-  @media (max-width: 768px) {
-    display: block;
-    margin: auto 19px auto 0px;
+  display: block;
+  margin: auto 19px auto 0px;
+  ${props => props.theme.breakpoints.laptop} {
+    display: none;
   }
 `;
 
 export const HambugerBtn = styled(Hambuger)<LogoGroupProps>`
-  display: none;
-  @media (max-width: 768px) {
-    display: block;
-  }
+  display: block;
 `;
