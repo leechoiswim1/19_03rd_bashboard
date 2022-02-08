@@ -7,8 +7,8 @@ export const Wrapper = styled.section<HeadBtnProps>`
   color: white;
   display: ${props => (props.path === 'sidebar' ? 'block' : 'flex')};
   justify-content: space-between;
-  line-height: 20px;
-  @media (max-width: 480px) {
+  line-height: ${props => props.theme.lineHeight.l};
+  ${props => props.theme.breakpoints.mobile} {
     display: ${props => props.path === 'Nav' && 'none'};
   }
 `;

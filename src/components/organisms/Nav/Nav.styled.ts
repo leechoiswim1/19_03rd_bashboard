@@ -5,14 +5,13 @@ export const Wrapper = styled.div`
 `;
 export const NavBar = styled.div`
   width: 100%;
-  height: 70px;
-  background: #1565c0;
-  padding: 25px 40px;
+  height: 44px;
+  padding: 10px 20px;
+  background: ${props => props.theme.color.navblue};
   display: flex;
   justify-content: space-between;
-
-  @media (max-width: 768px) {
-    height: 44px;
-    padding: 10px 20px;
+  ${props => props.theme.breakpoints.laptop} {
+    height: 70px;
+    padding: 25px 40px;
   }
 `;

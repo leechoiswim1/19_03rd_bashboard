@@ -13,12 +13,12 @@ export const Text = styled.span<HeadBtnProps>`
   ${props =>
     props.path === 'sidebar'
       ? css`
-          font-size: 13px;
-          color: black;
+          font-size: ${props.theme.fontSize.s};
+          color: ${props.theme.color.black};
         `
       : css`
-          font-size: 14px;
-          color: white;
+          font-size: ${props.theme.fontSize.s};
+          color: ${props.theme.color.white};
         `};
 `;
 

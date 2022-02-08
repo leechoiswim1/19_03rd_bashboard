@@ -15,6 +15,7 @@ export const theme: DefaultTheme = {
     s: '14px',
     m: '16px',
     l: '20px',
+    xl: '24px',
   },
 
   lineHeight: {
@@ -24,6 +25,7 @@ export const theme: DefaultTheme = {
   },
 
   breakpoints: {
+    mobile: '@media screen and (max-width: 480px)',
     tablet: '@media screen and (min-width: 481px)',
     laptop: '@media screen and (min-width: 769px)',
     desktop: '@media screen and (min-width: 1025px)',
