@@ -11,12 +11,6 @@ export const theme: DefaultTheme = {
     orange: '#FFA000',
   },
 
-  fontFamilly: {
-    regular: 'Noto Sans KR Regular',
-    bold: 'Noto Sans KR Bold',
-    medium: 'Noto Sans KR Medium',
-  },
-
   fontSize: {
     xs: '12px',
     s: '14px',

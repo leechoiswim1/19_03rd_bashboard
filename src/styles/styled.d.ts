@@ -12,12 +12,6 @@ declare module 'styled-components' {
       orange: string;
     };
 
-    fontFamilly: {
-      regular: string;
-      bold: string;
-      medium: string;
-    };
-
     fontSize: {
       xs: string;
       s: string;
