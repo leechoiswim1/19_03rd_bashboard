@@ -12,6 +12,7 @@ declare module 'styled-components' {
       orange: string;
     };
     fontSize: {
+      xs: string;
       s: string;
       m: string;
       l: string;
