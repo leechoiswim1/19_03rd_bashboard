@@ -15,11 +15,18 @@ declare module 'styled-components' {
       s: string;
       m: string;
       l: string;
+      xl: string;
     };
     lineHeight: {
       s: number;
       m: number;
       l: number;
+    };
+    breakpoints: {
+      mobile: string;
+      tablet: string;
+      laptop: string;
+      desktop: string;
     };
   }
 }
