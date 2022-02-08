@@ -13,7 +13,6 @@ const DashboardLayout = (): ReactElement => {
           // eslint-disable-next-line react/no-array-index-key
           <S.DummyCard key={index} />
         ))}
-        {cardsList.length % 2 === 1 && <S.HiddenDummyCard />}
       </S.RequestCardWrapper>
     </S.Layout>
   );

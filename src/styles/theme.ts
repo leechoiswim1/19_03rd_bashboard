@@ -25,6 +25,7 @@ export const theme: DefaultTheme = {
 
   breakpoints: {
     tablet: '@media screen and (min-width: 481px)',
-    desktop: '@media screen and (min-width: 769px)',
+    laptop: '@media screen and (min-width: 769px)',
+    desktop: '@media screen and (min-width: 1025px)',
   },
 };
