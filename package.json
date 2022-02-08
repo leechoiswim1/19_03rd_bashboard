@@ -21,8 +21,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node server/index.js",
+    "start:dev": "react-scripts start",
+    "build": "cross-env NODE_PATH=src react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 8000"
@@ -49,7 +50,7 @@
     "@types/styled-components": "^5.1.22",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
-    "prettier": "^2.5.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.8.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.1.0",
@@ -57,6 +58,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.5.1"
   }
 }
