@@ -1,9 +1,5 @@
 import styled from 'styled-components/macro';
 
-interface IButton {
-  primary: boolean;
-}
-
 export const Card = styled.div`
     width: 100%;
   padding: 24px 16px;
