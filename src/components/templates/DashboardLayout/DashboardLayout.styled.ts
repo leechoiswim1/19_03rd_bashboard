@@ -41,3 +41,15 @@ export const RequestCardWrapper = styled.div`
     grid-template-columns: repeat(3, 1fr);
   }
 `;
+
+export const Box = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Text = styled.span`
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.color.black};
+`;
