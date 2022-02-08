@@ -78,20 +78,19 @@
 
 Project Clone
 
-```bash
+```
 $ https://github.com/wantedPreOnboarding/19_03rd_dashboard
-
 ```
 
 Project Setup
 
-```bash
+```
 $ yarn install
 ```
 
 Project Start For Development
 
-```bash
+```
 $ yarn start
 ```
 
@@ -108,3 +107,45 @@ $ yarn start
 <div>
   <img src="https://img.shields.io/badge/git-flow-brightgreen?style=for-the-badge&logo"/>
 </div>
+
+## 8. 🌲 폴더 구조
+
+```
+├── README.md
+├── db.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── server
+│   ├── db.json
+│   └── index.js
+├── src
+│   ├── App.tsx
+│   ├── api
+│   │   ├── request.ts
+│   │   └── request.type.ts
+│   ├── assets
+│   │   └── images
+│   ├── components
+│   │   ├── atoms
+│   │   ├── molecules
+│   │   ├── organisms
+│   │   ├── pages
+│   │   └── templates
+│   ├── consts
+│   │   └── constants.ts
+│   ├── index.tsx
+│   ├── setupTests.ts
+│   ├── styles
+│   │   ├── globalStyles.tsx
+│   │   ├── styled.d.ts
+│   │   └── theme.ts
+│   ├── types
+│   │   ├── props.ts
+│   │   └── react-app-env.d.ts
+│   └── utils
+│       └── index.md
+├── tsconfig.json
+└── yarn.lock
+```
