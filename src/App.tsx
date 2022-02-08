@@ -10,7 +10,7 @@ const App = () => (
     </header>
     <main>
       <Dashboard>
-        <Sample sampleId={1} title="Sample">
+        <Sample sampleId={1} title="Sample" primary>
           123
         </Sample>
       </Dashboard>
