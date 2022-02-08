@@ -4,12 +4,16 @@ export const CardWrapper = styled.div`
   width: 100%;
   padding: 24px 16px;
   border: 1px solid ${({ theme }) => theme.color.borderGray};
+  font-familly: ${({ theme }) => theme.fontFamilly.regular};
   transition: all ease 0.1s;
   &:hover {
     border: 2px solid ${({ theme }) => theme.color.primaryBlue};
-    padding: 22px 14px;
+    padding: 23px 15px;
   }
   border-radius: 4px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 344px;
+  } ;
 `;
 
 export const TitleWrapper = styled.div`
@@ -19,6 +23,7 @@ export const TitleWrapper = styled.div`
 
 export const Title = styled.h3`
   color: ${({ theme }) => theme.color.black};
+  font-familly: ${({ theme }) => theme.fontFamilly.bold};
   font-size: ${({ theme }) => theme.fontSize.m};
   font-weight: ${({ theme }) => theme.fontWeight.strong};
   line-height: ${({ theme }) => theme.lineHeight.m};
@@ -26,6 +31,7 @@ export const Title = styled.h3`
 
 export const Client = styled.h4`
   margin-bottom: 24px;
+  font-familly: ${({ theme }) => theme.fontFamilly.medium};
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.fontWeight.semiStrong};
   line-height: ${({ theme }) => theme.lineHeight.s};
@@ -49,15 +55,18 @@ export const ContentWrapper = styled.div`
 
 export const ContentTitle = styled.div`
   color: ${({ theme }) => theme.color.black};
+  font-familly: ${({ theme }) => theme.fontFamilly.bold};
   font-weight: ${({ theme }) => theme.fontWeight.normal};
-  flex: 1 1;
+  width: 70px;
+  margin-right: 32px;
+  // flex: 1.2 1;
 `;
 
 export const Contents = styled.div`
   color: ${({ theme }) => theme.color.black};
   font-weight: ${({ theme }) => theme.fontWeight.strong};
   font-weight: 700;
-  flex: 2 1;
+  // flex: 3 1;
 `;
 
 export const ButtonWrapper = styled.div`
