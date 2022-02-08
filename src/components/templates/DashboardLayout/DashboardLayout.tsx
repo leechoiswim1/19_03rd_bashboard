@@ -42,8 +42,10 @@ const DashboardLayout = ({ requests }: DashboardLayoutProps): ReactElement => {
           setCheckMethod={setCheckMethod}
           setCheckedMaterial={setCheckedMaterial}
         />
-        <ToggleBtn clicked={isConsult} setToggled={setIsConsult} />
-        <S.Text>상담 중인 요청만 보기</S.Text>
+        <S.CSBox>
+          <ToggleBtn clicked={isConsult} setToggled={setIsConsult} />
+          <S.Text>상담 중인 요청만 보기</S.Text>
+        </S.CSBox>
       </S.Box>
       {filteredRequests.length === 0 ? (
         <NoResults />

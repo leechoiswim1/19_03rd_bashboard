@@ -50,4 +50,7 @@ export const Button = styled.button<Pick<FilterDropProps, 'category'> & { primar
   svg {
     color: ${props => (props.primary ? props.theme.color.white : props.theme.color.gray)};
   }
+  ${props => props.theme.breakpoints.tablet} {
+    margin-right: 8px;
+  }
 `;
