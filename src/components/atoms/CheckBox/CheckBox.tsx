@@ -21,4 +21,4 @@ const CheckBox = ({
     onChange={onChange}
   />
 );
-export default CheckBox;
+export default React.memo(CheckBox);
