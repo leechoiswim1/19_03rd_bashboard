@@ -1,4 +1,4 @@
-# dashboard
+# Dashboard
 
 1. 💁 프로젝트 소개
 2. 👋🏻 팀원 소개
@@ -86,20 +86,19 @@
 
 Project Clone
 
-```bash
-$ https://github.com/wantedPreOnboarding/19_03rd_dashboard
-
+```
+$ git clone https://github.com/wantedPreOnboarding/19_03rd_dashboard
 ```
 
 Project Setup
 
-```bash
+```
 $ yarn install
 ```
 
 Project Start For Development
 
-```bash
+```
 $ yarn start
 ```
 
@@ -107,6 +106,48 @@ $ yarn start
 
 <div>
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
   <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
 </div>
+
+## 8. 🌲 폴더 구조
+
+```
+├── README.md
+├── db.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── server
+│   ├── db.json
+│   └── index.js
+├── src
+│   ├── App.tsx
+│   ├── api
+│   │   ├── request.ts
+│   │   └── request.type.ts
+│   ├── assets
+│   │   └── images
+│   ├── components
+│   │   ├── atoms
+│   │   ├── molecules
+│   │   ├── organisms
+│   │   ├── pages
+│   │   └── templates
+│   ├── consts
+│   │   └── constants.ts
+│   ├── index.tsx
+│   ├── setupTests.ts
+│   ├── styles
+│   │   ├── globalStyles.tsx
+│   │   ├── styled.d.ts
+│   │   └── theme.ts
+│   ├── types
+│   │   ├── props.ts
+│   │   └── react-app-env.d.ts
+│   └── utils
+│       └── index.md
+├── tsconfig.json
+└── yarn.lock
+```
