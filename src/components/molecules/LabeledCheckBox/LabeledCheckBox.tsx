@@ -12,16 +12,14 @@ const LabeledCheckBox = ({
   required,
   readOnly,
   handleCheckList,
+  isChecked,
 }: SCProps<LabeledCheckBoxProps>): ReactElement => {
-  const [isChecked, setIsChecked] = useState(false);
-
   const handleOnChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       onChange?.(e);
-      setIsChecked(!isChecked);
       handleCheckList(e.target.id as Material | Method);
     },
-    [isChecked, onChange, handleCheckList],
+    [onChange, handleCheckList],
   );
 
   return (

@@ -53,6 +53,7 @@ const FilterDropDown = ({
               key={method}
               label={method}
               id={method}
+              isChecked={([...checkedMethod, ...checkedMaterial] as string[]).includes(method)}
               handleCheckList={handleCheckList}
             />
           ),
